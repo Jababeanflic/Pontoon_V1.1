@@ -41,7 +41,7 @@ public class NewGame {
                 System.out.print("You have drawn a " + newCard);
                 total = Pontoon.calcTotal(total, newCard);
                 System.out.println("\nYour total is " + total);
-                if (Pontoon.busted(total) == true) {
+                if (Pontoon.busted(total)) {
                     System.out.println("Your bust with " + total);
                     Statistics.cardsDrawn(cardsDrawn, totalCardsDrawn);
                     break; // Ends the game and program
@@ -50,7 +50,7 @@ public class NewGame {
                 choice = kboard.next();
             } // end while
 
-            if (Pontoon.getResult(total, dealer) == true) {
+            if (Pontoon.getResult(total, dealer)) {
                 System.out.println("You have won with a total of " + total + " Dealer has " + dealer);
                 gamesWon++; // track games one
             } else {

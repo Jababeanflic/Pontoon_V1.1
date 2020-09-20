@@ -44,14 +44,11 @@ public class GamesPlayed {
         return playGame;
     }
 
-
     /*public static void main(String[] args) {
         int gamesPlayed = 1;
-        GamesPlayed game = new GamesPlayed(playerContinue(gamesPlayed), numberGamesPlayed(gamesPlayed));
 
+        GamesPlayed game = new GamesPlayed(playerContinue(gamesPlayed), numberGamesPlayed(gamesPlayed));
         System.out.println(game.getPlayGame());
         System.out.println(game.getNoGamesPlayed());
-
-    }
-     */
+    } */
 }
