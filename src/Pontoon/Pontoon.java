@@ -2,7 +2,7 @@ package Pontoon;
 
 import java.util.Scanner;
 
-public class Pontoon {
+public class Pontoon { // class to generate/print to screen random numbers/cards drawn and check total
 
     public static int getRandomNumber() {
         return (int) (Math.random() * 10 + 1);

@@ -34,6 +34,6 @@ public class Statistics {
         } // add new card to total cards drawn count so x=the card that was drawn and +1 is added to the "sub array"
 
         System.out.println();
-        return (totalCardsDrawn); // Returns the total card drawn array within array, first index is card number second
+        return (totalCardsDrawn); // Returns the total card drawn 2d array, first index is card number second
     } // end method               // index is the number of time that card was drawn
 }

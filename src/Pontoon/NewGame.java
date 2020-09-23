@@ -35,7 +35,7 @@ public class NewGame {
             System.out.println("Do you want to draw another card y/n?");
             choice = kboard.next();
 
-            while (choice.equalsIgnoreCase("y")) {
+            while (choice.equalsIgnoreCase("y")) { // Loop to draw new cards
                 newCard = Pontoon.getRandomNumber();
                 cardsDrawn[cardCount++] = newCard;
                 System.out.print("You have drawn a " + newCard);
@@ -57,8 +57,8 @@ public class NewGame {
                 System.out.println("You have lost with a total of " + total + " Dealer has " + dealer);
             }
 
-            totalCards = Statistics.cardsDrawn(cardsDrawn, totalCardsDrawn);
-            GamesPlayed game = new GamesPlayed(GamesPlayed.playerContinue(gamesPlayed), GamesPlayed.numberGamesPlayed(gamesPlayed));
+            totalCards = Statistics.cardsDrawn(cardsDrawn, totalCardsDrawn); // Adds to the cards drawn to the 2d array
+            GamesPlayed game = new GamesPlayed(GamesPlayed.playerContinue(gamesPlayed), GamesPlayed.numberGamesPlayed(gamesPlayed)); // Controls number of games that can be played
             gamesPlayed = game.getNoGamesPlayed();
             PlayGame = game.getPlayGame();
 
