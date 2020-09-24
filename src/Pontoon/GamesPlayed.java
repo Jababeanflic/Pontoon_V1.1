@@ -1,32 +1,32 @@
 package Pontoon;
-
+/**
+ * Pontoon
+ * @author 18025316
+ * Scott Kinsmnan
+ * 24/09/2020
+ */
 import java.util.Scanner;
 
 public class GamesPlayed {
     private static boolean playGame;
-    private int noGamesPlayed;
 
-    public GamesPlayed() {
+    /**
+     * @param playerContinue
+     */
+    public GamesPlayed(boolean playerContinue) {
     }
 
-    public GamesPlayed(boolean playGame, int noGamesPlayed) { // setter
-        this.playGame = playGame;
-        this.noGamesPlayed = noGamesPlayed;
-    }
-
+    /**
+     * @return
+     */
     public boolean getPlayGame() {
         return playGame;
     }
 
-    public int getNoGamesPlayed() {
-        return noGamesPlayed;
-    }
-
-    public static int numberGamesPlayed(int gamesPlayed) {
-        gamesPlayed++;
-        return (gamesPlayed);
-    }
-
+    /**
+     * @param gamesPlayed
+     * @return
+     */
     public static boolean playerContinue(int gamesPlayed) {
 
         if (gamesPlayed < 5) {
@@ -40,15 +40,8 @@ public class GamesPlayed {
             }
         } else {
             System.out.println("You have played " + gamesPlayed + " games thats the max, Bye!");
+            playGame = false;
         }
         return playGame;
     }
-
-    /*public static void main(String[] args) {
-        int gamesPlayed = 1;
-
-        GamesPlayed game = new GamesPlayed(playerContinue(gamesPlayed), numberGamesPlayed(gamesPlayed));
-        System.out.println(game.getPlayGame());
-        System.out.println(game.getNoGamesPlayed());
-    } */
 }

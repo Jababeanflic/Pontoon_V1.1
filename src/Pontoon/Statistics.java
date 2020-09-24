@@ -1,7 +1,16 @@
 package Pontoon;
-
+/**
+ * Pontoon
+ * @author 18025316
+ * Scott Kinsmnan
+ * 24/09/2020
+ */
 public class Statistics {
 
+    /**
+     * @param gamesWon ,
+     * @param gamesPlayed ,
+     */
     public static void statistic(int gamesWon, int gamesPlayed) { // Method to calculate win percent
 
         System.out.println("Games played: " + gamesPlayed);
@@ -10,17 +19,27 @@ public class Statistics {
         System.out.println("Percentage of games won: " + winPercent + "%");
     }// end method
 
-    public static void totalCards(int[][] cardsDrawn) { // Method to print out each card and the number of times it was drawn
+    /**
+     * print out each card and the number of times it was drawn
+     * loops number of times equal to length of cards drawn array so 10
+     * @param cardsDrawn ,
+     */
+    public static void totalCards(int[][] cardsDrawn) {
 
         System.out.println("Frequency of each card drawn");
 
-        for (int i = 1; i < cardsDrawn.length; i++) {// loops number of times equal to length of cards drawn array so 10
+        for (int i = 1; i < cardsDrawn.length; i++) {
             System.out.println("Number of time card number " + i + " was drawn: " + cardsDrawn[i][0]);
         }
         System.out.println();
     }// end method
 
-    public static int[][] cardsDrawn(int[] cardsDrawn, int[][] totalCardsDrawn) // Method to store which cards were drawn
+    /**
+     * @param cardsDrawn current cards in player hand
+     * @param totalCardsDrawn all cards that have been in player hand
+     * @return  total card drawn 2d array, first index is card number second number of time that card was drawn
+     */
+    public static int[][] cardsDrawn(int[] cardsDrawn, int[][] totalCardsDrawn)
     {
         System.out.print("Cards drawn: ");
         for (int x = 0; x < 10; x++) {
@@ -31,9 +50,9 @@ public class Statistics {
                     System.out.print("," + cardsDrawn[x]);
                 }
             totalCardsDrawn[cardsDrawn[x]][0] = totalCardsDrawn[cardsDrawn[x]][0] + 1;
-        } // add new card to total cards drawn count so x=the card that was drawn and +1 is added to the "sub array"
+        } // add new card to total cards drawn count x=the card that was drawn and +1 is added to the "2nd array"
 
         System.out.println();
-        return (totalCardsDrawn); // Returns the total card drawn 2d array, first index is card number second
-    } // end method               // index is the number of time that card was drawn
+        return (totalCardsDrawn);
+    } // end method
 }
